@@ -18,6 +18,7 @@ export const RatingList = styled.div`
   padding: 0 0 0 50px;
 `;
 export const GameLogo = styled.img`
+  cursor: pointer;
   width: 20px;
   height: 20px;
 `;

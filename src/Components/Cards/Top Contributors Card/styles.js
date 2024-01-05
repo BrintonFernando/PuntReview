@@ -35,10 +35,12 @@ export const Profile = styled.div`
   }
 `;
 export const ProfileImage = styled.img`
+  cursor: pointer;
   height: 40px;
   width: 40px;
 `;
 export const ProfileName = styled.div`
+  cursor: pointer;
   width: max-content;
   font-family: Rubik;
   font-size: 15px;
@@ -47,6 +49,7 @@ export const ProfileName = styled.div`
   margin: 0 5px;
 `;
 export const Details = styled.div`
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: center;

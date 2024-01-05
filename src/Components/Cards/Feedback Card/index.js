@@ -35,9 +35,7 @@ const FeedbackCard = () => {
                 {profile.details[1]}
               </Details>
             </div>
-            <div>
-              <Question>What's your favorite aspect of online poker?</Question>
-            </div>
+            <Question>What's your favorite aspect of online poker?</Question>
           </Profile>
         ))}
       </ProfileDetails>

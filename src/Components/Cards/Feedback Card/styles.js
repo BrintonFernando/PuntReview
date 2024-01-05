@@ -20,10 +20,12 @@ export const Profile = styled.div`
   width: 240px;
 `;
 export const ProfileImage = styled.img`
+  cursor: pointer;
   height: 36px;
   width: 36px;
 `;
 export const ProfileName = styled.div`
+  cursor: pointer;
   width: max-content;
   font-family: Rubik;
   font-size: 15px;
