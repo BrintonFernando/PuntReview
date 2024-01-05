@@ -4,20 +4,19 @@ import {
   ExploreTopicIcon,
   Heading,
   ExploreTopicContent,
-  //   TopHeader,
   Content,
 } from "./styles";
 import exploreIcon from "../../../images/ExploreTopicIcon.svg";
+import ExploreTopicItems from "../CheckBox";
 
 const ExploreTopicCard = () => {
   return (
     <ExploreTopics>
       <ExploreTopicContent>
-        {/* <TopHeader> */}
         <ExploreTopicIcon src={exploreIcon} alt="exploreIcon" />
         <Heading>Explore Topics</Heading>
         <Content>Lorem Ipsum</Content>
-        {/* </TopHeader> */}
+        <ExploreTopicItems />
       </ExploreTopicContent>
     </ExploreTopics>
   );

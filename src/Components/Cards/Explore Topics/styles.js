@@ -7,7 +7,6 @@ export const ExploreTopics = styled.div`
   border-radius: 6px;
   color: rgba(255, 255, 255, 1);
   box-shadow: 0 1px 2px 0 rgba(23, 23, 23, 0.3);
-  /* margin: 20px; */
 `;
 export const ExploreTopicContent = styled.div`
   display: grid;
