@@ -1,8 +1,27 @@
 .App {
   text-align: center;
+  max-width: 1280px;
 }
 
-.App-logo {
+@font-face {
+  font-family: "Rubik";
+  src: url("/fonts/Rubik-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +54,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
