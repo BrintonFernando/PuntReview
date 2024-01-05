@@ -10,7 +10,7 @@ export const ExploreTopics = styled.div`
 `;
 export const ExploreTopicContent = styled.div`
   display: grid;
-  grid-template-rows: 11px;
+  grid-template-rows: 17px;
   grid-template-columns: 11px 120px;
   height: 36px;
   align-items: center;

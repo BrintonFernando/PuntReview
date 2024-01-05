@@ -1,23 +1,19 @@
 import React, { useState } from "react";
-import Card from "./card";
+import CheckBoxLists from "./CheckBoxLists";
 
-const ExploreTopicItems = () => {
-  const [isChecked, setIsChecked] = useState(true);
+const CheckBoxContent = () => {
+  const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
   };
 
   return (
-    <div>
-      <Card
-        title="General Gambling Discussion"
-        // description="Your gambling discussion content goes here."
-        isChecked={isChecked}
-        onCheckboxChange={handleCheckboxChange}
-      />
-    </div>
+    <CheckBoxLists
+      isChecked={isChecked}
+      onCheckboxChange={handleCheckboxChange}
+    />
   );
 };
 
-export default ExploreTopicItems;
+export default CheckBoxContent;

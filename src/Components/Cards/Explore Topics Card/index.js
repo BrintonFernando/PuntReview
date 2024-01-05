@@ -7,7 +7,7 @@ import {
   Content,
 } from "./styles";
 import exploreIcon from "../../../images/ExploreTopicIcon.svg";
-import ExploreTopicItems from "../CheckBox";
+import CheckBoxLists from "../CheckBox";
 
 const ExploreTopicCard = () => {
   return (
@@ -16,8 +16,8 @@ const ExploreTopicCard = () => {
         <ExploreTopicIcon src={exploreIcon} alt="exploreIcon" />
         <Heading>Explore Topics</Heading>
         <Content>Lorem Ipsum</Content>
-        <ExploreTopicItems />
       </ExploreTopicContent>
+      <CheckBoxLists />
     </ExploreTopics>
   );
 };
