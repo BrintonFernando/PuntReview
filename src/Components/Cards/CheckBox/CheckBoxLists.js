@@ -2,26 +2,26 @@ import React from "react";
 import styled from "styled-components";
 import Checkbox from "./checkBox";
 
-const CheckBoxLists = ({ onCheckboxChange }) => {
-  const titles = [
-    { title: "General Gambling Discussion" },
-    { title: "Compliants and Discussions" },
-    { title: "Responsible Gambling" },
-    { title: "Competitions" },
-    { title: "General Gambling Discussion" },
-    { title: "Compliants and Discussions" },
-    { title: "Responsible Gambling" },
-    { title: "Competitions" },
-    { title: "General Gambling Discussion" },
-    { title: "Compliants and Discussions" },
-  ];
+const titles = [
+  "General Gambling Discussion",
+  "Complaints and Discussions",
+  "Responsible Gambling",
+  "Competitions",
+  "General Gambling Discussion",
+  "Complaints and Discussions",
+  "Responsible Gambling",
+  "Competitions",
+  "General Gambling Discussion",
+  "Complaints and Discussions",
+];
 
+const CheckBoxLists = ({ onCheckboxChange }) => {
   return (
     <div>
-      {titles.map((item, index) => (
+      {titles.map((title, index) => (
         <CardElement key={index}>
           <Checkbox onChange={() => onCheckboxChange(index)} />
-          <Content>{item.title}</Content>
+          <Content>{title}</Content>
         </CardElement>
       ))}
     </div>
@@ -41,7 +41,7 @@ const CardElement = styled.div`
 
 const Content = styled.h3`
   width: max-content;
-  font-family: Rubik;
+  font-family: rubik;
   font-size: 14px;
   font-weight: 400;
   color: black;

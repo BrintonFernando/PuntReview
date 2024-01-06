@@ -27,7 +27,7 @@ export const ProfileImage = styled.img`
 export const ProfileName = styled.div`
   cursor: pointer;
   width: max-content;
-  font-family: Rubik;
+  font-family: rubik;
   font-size: 15px;
   font-weight: 500;
   color: rgba(17, 17, 17, 1);
@@ -39,7 +39,7 @@ export const Details = styled.div`
   align-items: center;
   gap: 5px;
   width: max-content;
-  font-family: Rubik;
+  font-family: rubik;
   font-size: 10px;
   font-weight: 400;
   color: rgba(98, 98, 98, 1);

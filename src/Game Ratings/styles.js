@@ -1,9 +1,7 @@
-import { styled, css } from "styled-components";
+import { styled } from "styled-components";
 
 export const GameListRating = styled.div`
   display: flex;
-  flex-direction: row;
-  width: 100%;
   height: 50px;
   align-items: center;
   border-bottom: 1px solid;
@@ -15,7 +13,7 @@ export const RatingList = styled.div`
   gap: 42px;
   align-items: center;
   justify-items: center;
-  padding: 0 0 0 50px;
+  padding-left: 50px;
 `;
 export const GameLogo = styled.img`
   cursor: pointer;
@@ -25,9 +23,8 @@ export const GameLogo = styled.img`
 export const NavLink = styled.a`
   cursor: pointer;
   place-content: center;
-  width: max-content;
   font-size: 14px;
-  font-family: Rubik;
+  font-family: rubik;
   color: white;
   line-height: 16.59px;
   font-weight: 400;

@@ -4,14 +4,10 @@ import CheckBoxLists from "./CheckBoxLists";
 const CheckBoxContent = () => {
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
-  };
-
   return (
     <CheckBoxLists
       isChecked={isChecked}
-      onCheckboxChange={handleCheckboxChange}
+      onCheckboxChange={() => setIsChecked(!isChecked)}
     />
   );
 };

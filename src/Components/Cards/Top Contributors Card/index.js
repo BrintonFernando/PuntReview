@@ -13,7 +13,6 @@ import profilePhoto1 from "../../../images/ProfileImage1.svg";
 import profilePhoto2 from "../../../images/ProfileImage2.svg";
 import profilePhoto3 from "../../../images/ProfileImage3.svg";
 import profilePhoto4 from "../../../images/ProfileImage4.svg";
-
 import dot from "../../../images/Dot.svg";
 
 const profiles = [
@@ -43,26 +42,23 @@ const profiles = [
   },
 ];
 
-const TopContributorsCard = () => {
-  return (
-    <TopContributors>
-      <Header>Top Contributors</Header>
-      <ProfileLists>
-        {profiles.map((profile) => (
-          <Profile key={profile.id}>
-            <ProfileImage src={profile.photo} alt="profile photo" />
-            <div>
-              <ProfileName>{profile.name}</ProfileName>
-              <Details>
-                <span>{profile.details[0]}</span> <Dot src={dot} alt="Dot" />{" "}
-                {profile.details[1]}
-              </Details>
-            </div>
-          </Profile>
-        ))}
-      </ProfileLists>
-    </TopContributors>
-  );
-};
+const TopContributorsCard = () => (
+  <TopContributors>
+    <Header>Top Contributors</Header>
+    <ProfileLists>
+      {profiles.map(({ id, photo, name, details }) => (
+        <Profile key={id}>
+          <ProfileImage src={photo} alt="profile photo" />
+          <div>
+            <ProfileName>{name}</ProfileName>
+            <Details>
+              <span>{details[0]}</span> <Dot src={dot} alt="Dot" /> {details[1]}
+            </Details>
+          </div>
+        </Profile>
+      ))}
+    </ProfileLists>
+  </TopContributors>
+);
 
 export default TopContributorsCard;

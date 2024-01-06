@@ -21,26 +21,23 @@ const profiles = [
   },
 ];
 
-const FeedbackCard = () => {
-  return (
-    <FeedbackCardContainer>
-      <ProfileDetails>
-        {profiles.map((profile) => (
-          <Profile key={profile.id}>
-            <ProfileImage src={profile.photo} alt="profile photo" />
-            <div>
-              <ProfileName>{profile.name}</ProfileName>
-              <Details>
-                <span>{profile.details[0]}</span> <Dot src={dot} alt="Dot" />{" "}
-                {profile.details[1]}
-              </Details>
-            </div>
-            <Question>What's your favorite aspect of online poker?</Question>
-          </Profile>
-        ))}
-      </ProfileDetails>
-    </FeedbackCardContainer>
-  );
-};
+const FeedbackCard = () => (
+  <FeedbackCardContainer>
+    <ProfileDetails>
+      {profiles.map(({ id, photo, name, details }) => (
+        <Profile key={id}>
+          <ProfileImage src={photo} alt="profile photo" />
+          <div>
+            <ProfileName>{name}</ProfileName>
+            <Details>
+              <span>{details[0]}</span> <Dot src={dot} alt="Dot" /> {details[1]}
+            </Details>
+          </div>
+          <Question>What's your favorite aspect of online poker?</Question>
+        </Profile>
+      ))}
+    </ProfileDetails>
+  </FeedbackCardContainer>
+);
 
 export default FeedbackCard;

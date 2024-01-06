@@ -19,8 +19,9 @@ const Forum = () => {
         <div>center screen</div>
         <RightContent>
           <TopContributorsCard />
-          <FeedbackCard />
-          <FeedbackCard />
+          {[...Array(2)].map((_, index) => (
+            <FeedbackCard key={index} />
+          ))}
         </RightContent>
       </ForumPageContent>
     </ForumPage>

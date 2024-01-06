@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const Checkbox = ({ isChecked, onChange }) => {
-  return <Input type="checkbox" checked={isChecked} onChange={onChange} />;
-};
+const Checkbox = ({ isChecked, onChange }) => (
+  <Input type="checkbox" checked={isChecked} onChange={onChange} />
+);
 
 export default Checkbox;
 

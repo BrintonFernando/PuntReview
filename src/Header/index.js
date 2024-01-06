@@ -24,6 +24,8 @@ import profile from "../images/Mask group.svg";
 import { HEADINGS } from "./constants";
 
 function Header({ headings = HEADINGS }) {
+  const isCurrentPath = (url) => window.location.pathname === url;
+
   return (
     <HeaderContainerGrid>
       <HeaderContainerContent>
@@ -31,8 +33,8 @@ function Header({ headings = HEADINGS }) {
           <Logo src={logo} alt="Logo" />
           <Border />
           <NavLinkWrapper>
-            {headings.map(({ url, name }) => (
-              <NavLink href={url} active={window.location.pathname === url}>
+            {headings.map(({ url, name }, index) => (
+              <NavLink key={index} href={url} active={isCurrentPath(url)}>
                 {name}
               </NavLink>
             ))}

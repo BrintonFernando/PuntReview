@@ -9,17 +9,15 @@ import {
 import exploreIcon from "../../../images/ExploreTopicIcon.svg";
 import CheckBoxLists from "../CheckBox";
 
-const ExploreTopicCard = () => {
-  return (
-    <ExploreTopics>
-      <ExploreTopicContent>
-        <ExploreTopicIcon src={exploreIcon} alt="exploreIcon" />
-        <Heading>Explore Topics</Heading>
-        <Content>Lorem Ipsum</Content>
-      </ExploreTopicContent>
-      <CheckBoxLists />
-    </ExploreTopics>
-  );
-};
+const ExploreTopicCard = () => (
+  <ExploreTopics>
+    <ExploreTopicContent>
+      <ExploreTopicIcon src={exploreIcon} alt="exploreIcon" />
+      <Heading>Explore Topics</Heading>
+      <Content>Lorem Ipsum</Content>
+    </ExploreTopicContent>
+    <CheckBoxLists />
+  </ExploreTopics>
+);
 
 export default ExploreTopicCard;
