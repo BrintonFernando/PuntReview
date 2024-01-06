@@ -7,6 +7,7 @@ import {
   Details,
   ProfileImage,
   Dot,
+  VotingContent,
   Question,
 } from "./styles";
 import profilePhoto5 from "../../../images/ProfileImage5.svg";
@@ -32,8 +33,10 @@ const FeedbackCard = () => (
             <Details>
               <span>{details[0]}</span> <Dot src={dot} alt="Dot" /> {details[1]}
             </Details>
+            <VotingContent>
+              <Question>What's your favorite aspect of online poker?</Question>
+            </VotingContent>
           </div>
-          <Question>What's your favorite aspect of online poker?</Question>
         </Profile>
       ))}
     </ProfileDetails>

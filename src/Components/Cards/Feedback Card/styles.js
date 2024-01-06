@@ -51,8 +51,14 @@ export const Dot = styled.img`
   width: 4px;
   color: rgba(180, 180, 180, 1);
 `;
-export const Question = styled.span`
+export const VotingContent = styled.div`
   display: flex;
   position: relative;
+`;
+export const Question = styled.span`
+  font-family: rubik;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18.96px;
   color: rgba(0, 0, 0, 1);
 `;
