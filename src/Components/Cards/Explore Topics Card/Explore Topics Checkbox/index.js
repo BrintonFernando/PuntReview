@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import exploreTopicsCheckboxLists from "./exploreTopicsCheckBoxLists";
+import TopicsCheckboxLists from "./exploreTopicsCheckBoxLists";
 
 const CheckBoxContent = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
-    <exploreTopicsCheckboxLists
+    <TopicsCheckboxLists
       isChecked={isChecked}
       onCheckboxChange={() => setIsChecked(!isChecked)}
     />

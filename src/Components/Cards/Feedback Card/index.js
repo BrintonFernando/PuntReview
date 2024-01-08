@@ -12,6 +12,7 @@ import {
 } from "./styles";
 import profilePhoto5 from "../../../images/ProfileImage5.svg";
 import dot from "../../../images/Dot.svg";
+import FeedbackCheckBoxLists from "./Feedback Checkbox";
 
 const profiles = [
   {
@@ -39,6 +40,7 @@ const FeedbackCard = () => (
     </ProfileDetails>
     <VotingContent>
       <Question>What's your favorite aspect of online poker?</Question>
+      <FeedbackCheckBoxLists />
     </VotingContent>
   </FeedbackCardContainer>
 );

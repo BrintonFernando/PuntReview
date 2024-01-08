@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import exploreTopicsCheckbox from "./exploreTopicsCheckBox";
+import TopicsCheckbox from "./exploreTopicsCheckBox";
 
 const titles = [
   "General Gambling Discussion",
@@ -20,7 +20,7 @@ const exploreTopicsCheckBoxLists = ({ onCheckboxChange }) => {
     <div>
       {titles.map((title, index) => (
         <CardElement key={index}>
-          <exploreTopicsCheckbox onChange={() => onCheckboxChange(index)} />
+          <TopicsCheckbox onChange={() => onCheckboxChange(index)} />
           <Content>{title}</Content>
         </CardElement>
       ))}

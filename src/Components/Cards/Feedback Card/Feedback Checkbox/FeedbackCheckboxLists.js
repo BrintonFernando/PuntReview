@@ -1,48 +1,84 @@
 import React from "react";
 import styled from "styled-components";
 import FeedbackCheckbox from "./FeedbackCheckbox";
+import CustomProgressBar from "./ProgressBar";
 
 const titles = [
-  "General Gambling Discussion",
-  "Complaints and Discussions",
-  "Responsible Gambling",
-  "Competitions",
-  "General Gambling Discussion",
-  "Complaints and Discussions",
-  "Responsible Gambling",
-  "Competitions",
-  "General Gambling Discussion",
-  "Complaints and Discussions",
+  "Strategy and skill",
+  "Social interaction",
+  "Winning money",
+  "Entertainment and relaxation",
 ];
 
 const FeedbackCheckBoxLists = ({ onCheckboxChange }) => {
   return (
-    <div>
+    <FeedbackLists>
       {titles.map((title, index) => (
-        <CardElement key={index}>
-          <FeedbackCheckbox onChange={() => onCheckboxChange(index)} />
-          <Content>{title}</Content>
-        </CardElement>
+        <div key={index}>
+          <FeedbackContent>
+            <Lists>
+              <FeedbackCheckbox onChange={() => onCheckboxChange(index)} />
+              <Content>{title}</Content>
+              <VoteCount> 3 votes</VoteCount>
+            </Lists>
+            {index === 2 ? (
+              <CustomProgressBar now={90} label="90%" />
+            ) : (
+              <CustomProgressBar now={20} label="20%" />
+            )}
+          </FeedbackContent>
+        </div>
       ))}
-    </div>
+    </FeedbackLists>
   );
 };
 
 export default FeedbackCheckBoxLists;
 
-const CardElement = styled.div`
+const FeedbackLists = styled.div`
   display: flex;
-  flex-direction: row;
-  gap: 5px;
-  align-items: center;
-  height: 20px;
-  margin: 17px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 20px;
 `;
 
-const Content = styled.h3`
-  width: max-content;
+const FeedbackContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 36px;
+  gap: 8px;
+`;
+
+const Lists = styled.div`
+  display: flex;
+  width: 100%;
+  gap: 10px;
+`;
+
+const Content = styled.span`
+  display: flex;
+  width: 100%;
+  padding-top: 1.5px;
+  overflow-wrap: break-word;
   font-family: rubik;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
-  color: black;
+  color: rgba(67, 67, 67, 1);
+  line-height: 15.41px;
+`;
+
+const VoteCount = styled.span`
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  height: 12px;
+  width: 30%;
+  padding-top: 2px;
+  font-family: rubik;
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(67, 67, 67, 1);
+  line-height: 11.85px;
 `;
