@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import CheckBoxLists from "./CheckBoxLists";
+import FeedbackCheckBoxLists from "./FeedbackCheckboxLists";
 
-const CheckBoxContent = () => {
+const FeedbackCheckBoxContent = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
-    <CheckBoxLists
+    <FeedbackCheckBoxLists
       isChecked={isChecked}
       onCheckboxChange={() => setIsChecked(!isChecked)}
     />
   );
 };
 
-export default CheckBoxContent;
+export default FeedbackCheckBoxContent;

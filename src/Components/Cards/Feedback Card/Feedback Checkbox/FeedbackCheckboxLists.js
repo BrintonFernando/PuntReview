@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Checkbox from "./checkBox";
+import FeedbackCheckbox from "./FeedbackCheckbox";
 
 const titles = [
   "General Gambling Discussion",
@@ -15,12 +15,12 @@ const titles = [
   "Complaints and Discussions",
 ];
 
-const CheckBoxLists = ({ onCheckboxChange }) => {
+const FeedbackCheckBoxLists = ({ onCheckboxChange }) => {
   return (
     <div>
       {titles.map((title, index) => (
         <CardElement key={index}>
-          <Checkbox onChange={() => onCheckboxChange(index)} />
+          <FeedbackCheckbox onChange={() => onCheckboxChange(index)} />
           <Content>{title}</Content>
         </CardElement>
       ))}
@@ -28,7 +28,7 @@ const CheckBoxLists = ({ onCheckboxChange }) => {
   );
 };
 
-export default CheckBoxLists;
+export default FeedbackCheckBoxLists;
 
 const CardElement = styled.div`
   display: flex;

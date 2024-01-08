@@ -53,6 +53,8 @@ export const Dot = styled.img`
 `;
 export const VotingContent = styled.div`
   display: flex;
+  margin: 0 20px 0 20px;
+  /* align-items: flex-start; */
   position: relative;
 `;
 export const Question = styled.span`

@@ -33,13 +33,13 @@ const FeedbackCard = () => (
             <Details>
               <span>{details[0]}</span> <Dot src={dot} alt="Dot" /> {details[1]}
             </Details>
-            <VotingContent>
-              <Question>What's your favorite aspect of online poker?</Question>
-            </VotingContent>
           </div>
         </Profile>
       ))}
     </ProfileDetails>
+    <VotingContent>
+      <Question>What's your favorite aspect of online poker?</Question>
+    </VotingContent>
   </FeedbackCardContainer>
 );
 
