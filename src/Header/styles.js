@@ -76,7 +76,7 @@ export const Themes = styled.div`
   border-radius: 100px;
   box-sizing: border-box;
   border-image-slice: 1;
-  color: linear-gradient(to right, rgba(117, 17, 244, 1), rgba(189, 8, 218, 1));
+  border-color: rgba(117, 17, 244, 1);
 `;
 
 export const BrightnessLogo = styled.img`

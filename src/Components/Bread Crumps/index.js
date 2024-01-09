@@ -4,16 +4,14 @@ import { Link } from "react-router-dom";
 
 const Breadcrumbs = ({ paths }) => (
   <BreadcrumbsTab>
-    {paths.map((path, index) => (
+    {paths.map(({ link, label }, index) => (
       <React.Fragment key={index}>
-        <StyledLink to={path.link}>{path.label}</StyledLink>
-        {index < paths.length - 1 && <span> &gt; </span>}
+        <StyledLink to={link}>{label}</StyledLink>
+        {index < paths.length - 1 && <Separator> &gt; </Separator>}
       </React.Fragment>
     ))}
   </BreadcrumbsTab>
 );
-
-export default Breadcrumbs;
 
 const BreadcrumbsTab = styled.h6`
   display: inline-block;
@@ -22,7 +20,12 @@ const BreadcrumbsTab = styled.h6`
   font-family: rubik;
   line-height: 11.85px;
   font-weight: 400;
-  margin: 28px 0px 20px 0px;
+  margin: 28px 0 20px 0;
+  color: rgba(103, 103, 103, 1);
+`;
+
+const Separator = styled.span`
+  margin: 0 5px;
   color: rgba(103, 103, 103, 1);
 `;
 
@@ -30,3 +33,5 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   color: inherit;
 `;
+
+export default Breadcrumbs;

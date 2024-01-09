@@ -1,8 +1,8 @@
 import React from "react";
 import { Input } from "./styles";
 
-const exploreTopicsCheckbox = ({ isChecked, onChange }) => (
+const ExploreTopicsCheckbox = ({ isChecked, onChange }) => (
   <Input type="checkbox" checked={isChecked} onChange={onChange} />
 );
 
-export default exploreTopicsCheckbox;
+export default ExploreTopicsCheckbox;

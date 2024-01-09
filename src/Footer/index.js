@@ -2,53 +2,79 @@ import React from "react";
 import {
   FooterContainer,
   FooterContainerWithBkg,
-  Logo,
+  PuntReview,
   Disclaimer,
   NavLink,
   Border,
   NavButton,
   CopyRight,
   NavLists,
+  MailID,
+  Logo,
 } from "./styles";
 import BackToTop from "../Components/Buttons/GoUpButton";
 import logo from "../images/PuntReview.svg";
+import email from "../images/Email.svg";
+import facebook from "../images/facebook.png";
+import linkedin from "../images/Linkedin.png";
+import instagram from "../images/Instagram.png";
+
+const socialMediaIcons = [
+  { icon: facebook, alt: "Facebook" },
+  { icon: linkedin, alt: "Linkedin" },
+  { icon: instagram, alt: "Instagram" },
+  { icon: instagram, alt: "Instagram" },
+  { icon: instagram, alt: "Instagram" },
+];
+
+const footerLists = [
+  ["Online Casinos", "Bonuses", "Gambling Guides", "Forum", "User Reviews"],
+  ["About Us", "Contact us", "Licenses", "Casino Regulations"],
+];
+
+const ratings = ["Sitemap", "Robot.txt", "Disclaimer"].map((name) => ({
+  name: name || `/${name.toUpperCase().split(" ").join("-")}`,
+}));
 
 const Footer = () => {
-  const _name = ["Sitemap", "Robot.txt", "Disclaimer"];
-
-  const RATINGS = _name.map((name) => ({
-    name: name || `/${name.toUpperCase().split(" ").join("-")}`,
-  }));
-
   return (
-    <>
-      <FooterContainer>
-        <BackToTop />
-        <FooterContainerWithBkg>
-          <Logo src={logo} alt="Logo" />
-          <NavLists>
-            <span>Online Casinos</span>
-            <span>Bonuses</span>
-            <span>Gambling Guides</span>
-            <span>Forum</span>
-            <span>User Reviews</span>
-          </NavLists>
-        </FooterContainerWithBkg>
-        <Disclaimer>
-          <CopyRight>©️ Punt Review 2023</CopyRight>
-          <NavButton>
-            {RATINGS.map(({ name }, index) => (
-              <React.Fragment key={index}>
-                <NavLink>
-                  <span>{name}</span>
-                  {index !== RATINGS.length - 1 && <Border>{}</Border>}
-                </NavLink>
-              </React.Fragment>
+    <FooterContainer>
+      <BackToTop />
+      <FooterContainerWithBkg>
+        <PuntReview src={logo} alt="Logo" />
+        {footerLists.map((list, i) => (
+          <NavLists key={i}>
+            {list.map((item) => (
+              <NavLists key={item}>
+                <span>{item}</span>
+              </NavLists>
             ))}
-          </NavButton>
-        </Disclaimer>
-      </FooterContainer>
-    </>
+          </NavLists>
+        ))}
+        <div>
+          <MailID key="mail">
+            <img src={email} alt="Mail Id" />
+            <span>info@puntreview.in</span>
+          </MailID>
+          {socialMediaIcons.map(({ icon, alt }, i) => (
+            <Logo key={i} src={icon} alt={alt} />
+          ))}
+        </div>
+      </FooterContainerWithBkg>
+      <Disclaimer>
+        <CopyRight>©️ Punt Review 2023</CopyRight>
+        <NavButton>
+          {ratings.map(({ name }, i) => (
+            <React.Fragment key={i}>
+              <NavLink>
+                <span>{name}</span>
+                {i !== ratings.length - 1 && <Border>{}</Border>}
+              </NavLink>
+            </React.Fragment>
+          ))}
+        </NavButton>
+      </Disclaimer>
+    </FooterContainer>
   );
 };
 

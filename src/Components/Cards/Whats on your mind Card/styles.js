@@ -5,18 +5,12 @@ export const AddPostCard = styled.div`
   flex-direction: column;
   width: 580px;
   height: 132px;
-  border: 1px solid;
+  border: 1px solid rgba(117, 17, 244, 0.6);
   margin-bottom: 3px;
-  border-image: linear-gradient(
-    to right,
-    rgba(117, 17, 244, 0.4),
-    rgba(189, 8, 218, 0.4)
-  );
   border-radius: 6px;
-  border-image-slice: 1;
   overflow: hidden;
   box-sizing: border-box;
-  box-shadow: 0 0 14px 0 rgba(30, 30, 30, 0.1);
+  box-shadow: 0 0px 14px 0 rgba(30, 30, 30, 0.1);
 `;
 
 export const TextInput = styled.div`
