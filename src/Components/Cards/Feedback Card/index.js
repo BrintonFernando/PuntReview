@@ -3,16 +3,22 @@ import {
   FeedbackCardContainer,
   ProfileDetails,
   Profile,
+  ProfileImage,
   ProfileName,
   Details,
-  ProfileImage,
   Dot,
   VotingContent,
   Question,
+  FeedbackCardFooter,
+  LikeIcon,
+  CommentIcon,
 } from "./styles";
+import like from "../../../images/Like icon.svg";
+import comment from "../../../images/Comment Icon.svg";
 import profilePhoto5 from "../../../images/ProfileImage5.svg";
 import dot from "../../../images/Dot.svg";
-import FeedbackCheckBoxLists from "./Feedback Checkbox";
+import FeedbackCheckBoxLists from "./Feedback Checkbox/FeedbackCheckboxLists";
+import FeedbackEndsCheckBoxLists from "../../../Forum Page/FeedbackEndsCheckboxLists";
 
 const profiles = [
   {
@@ -24,25 +30,40 @@ const profiles = [
 ];
 
 const FeedbackCard = () => (
-  <FeedbackCardContainer>
-    <ProfileDetails>
-      {profiles.map(({ id, photo, name, details }) => (
-        <Profile key={id}>
-          <ProfileImage src={photo} alt="profile photo" />
-          <div>
-            <ProfileName>{name}</ProfileName>
-            <Details>
-              <span>{details[0]}</span> <Dot src={dot} alt="Dot" /> {details[1]}
-            </Details>
-          </div>
-        </Profile>
-      ))}
-    </ProfileDetails>
-    <VotingContent>
-      <Question>What's your favorite aspect of online poker?</Question>
-      <FeedbackCheckBoxLists />
-    </VotingContent>
-  </FeedbackCardContainer>
+  <div>
+    {profiles.map(({ id, photo, name, details }) => (
+      <FeedbackCardContainer key={id}>
+        <ProfileDetails>
+          <Profile>
+            <ProfileImage src={photo} alt="profile photo" />
+            <div>
+              <ProfileName>{name}</ProfileName>
+              <Details>
+                <span>{details[0]}</span> <Dot src={dot} alt="Dot" />{" "}
+                {details[1]}
+              </Details>
+            </div>
+          </Profile>
+        </ProfileDetails>
+        <VotingContent>
+          <Question>What's your favorite aspect of online poker?</Question>
+          {/* Conditionally render FeedbackCheckBoxLists or FeedbackEndsCheckBoxLists */}
+          {id % 2 === 1 ? (
+            <FeedbackCheckBoxLists />
+          ) : (
+            <FeedbackEndsCheckBoxLists />
+          )}
+          <FeedbackCardFooter>
+            <LikeIcon src={like} alt="like" />
+            <span>24k</span>
+            <Dot src={dot} alt="Dot" />
+            <CommentIcon src={comment} alt="comment" />
+            <span>5k</span>
+          </FeedbackCardFooter>
+        </VotingContent>
+      </FeedbackCardContainer>
+    ))}
+  </div>
 );
 
 export default FeedbackCard;

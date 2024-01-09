@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { CardElement, Content } from "./styles";
 import TopicsCheckbox from "./exploreTopicsCheckBox";
 
 const titles = [
@@ -29,20 +29,3 @@ const exploreTopicsCheckBoxLists = ({ onCheckboxChange }) => {
 };
 
 export default exploreTopicsCheckBoxLists;
-
-const CardElement = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-  align-items: center;
-  height: 20px;
-  margin: 17px;
-`;
-
-const Content = styled.h3`
-  width: max-content;
-  font-family: rubik;
-  font-size: 14px;
-  font-weight: 400;
-  color: black;
-`;

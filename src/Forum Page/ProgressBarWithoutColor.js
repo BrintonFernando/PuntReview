@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ProgressBarContainer, StyledProgressBar, Percentage } from "./styles";
+import { ProgressBarContainer, StyledProgressBar } from "./styles";
 
 function CustomProgressBar({ now, label }) {
   const getGradientBackground = (percentage) => {
@@ -12,13 +12,7 @@ function CustomProgressBar({ now, label }) {
 
   return (
     <ProgressBarContainer>
-      <StyledProgressBar
-        now={now}
-        visuallyHidden
-        animated
-        style={{ background: barBackground }}
-      />
-      <Percentage>{label}</Percentage>
+      <StyledProgressBar now={now} visuallyHidden animated style={{}} />
     </ProgressBarContainer>
   );
 }

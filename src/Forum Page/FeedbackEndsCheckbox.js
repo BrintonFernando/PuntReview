@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Input, TickButton } from "./styles";
 
-const FeedbackCheckbox = ({ isChecked, onChange }) => {
+const FeedbackEndsCheckbox = ({ isChecked, onChange }) => {
   const [checked, setChecked] = useState(isChecked);
 
   const handleCheckboxChange = () => {
@@ -16,4 +16,4 @@ const FeedbackCheckbox = ({ isChecked, onChange }) => {
   );
 };
 
-export default FeedbackCheckbox;
+export default FeedbackEndsCheckbox;

@@ -54,7 +54,7 @@ export const Dot = styled.img`
 export const VotingContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   margin: 0 20px 0 20px;
   position: relative;
 `;
@@ -64,4 +64,24 @@ export const Question = styled.span`
   font-size: 16px;
   line-height: 18.96px;
   color: rgba(0, 0, 0, 1);
+`;
+export const FeedbackCardFooter = styled.div`
+  display: flex;
+  color: rgba(35, 35, 35, 1);
+  font-family: rubik;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 5px;
+  align-items: center;
+`;
+
+export const LikeIcon = styled.img`
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+`;
+export const CommentIcon = styled.img`
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
 `;
