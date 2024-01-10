@@ -7,6 +7,7 @@ export const LargeTextPost = styled.div`
   height: 295px;
   width: 580px;
   box-sizing: border-box;
+  border-radius: 6px;
   box-shadow: 0 1px 2px 0 rgba(23, 23, 23, 0.1);
 `;
 

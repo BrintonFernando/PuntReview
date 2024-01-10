@@ -1,16 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
-import "./index.css";
+import "normalize.css";
+import { createRoot } from "react-dom";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
-  document.getElementById("root")
-);
+const root = createRoot(document.getElementById("root"));
 
-reportWebVitals();
+root.render(<App />);

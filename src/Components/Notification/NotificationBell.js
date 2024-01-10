@@ -22,8 +22,8 @@ const NotificationBell = () => (
           y2="0.503906"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#7511F4" />
-          <stop offset="1" stop-color="#BD08DA" />
+          <stop stopColor="#7511F4" />
+          <stop offset="1" stopColor="#BD08DA" />
         </linearGradient>
       </defs>
       <path

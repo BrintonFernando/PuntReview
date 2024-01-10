@@ -1,17 +1,23 @@
+// Breadcrumbs.js
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { useBreadcrumb } from "./BreadcrumbContext";
 
-const Breadcrumbs = ({ paths }) => (
-  <BreadcrumbsTab>
-    {paths.map(({ link, label }, index) => (
-      <React.Fragment key={index}>
-        <StyledLink to={link}>{label}</StyledLink>
-        {index < paths.length - 1 && <Separator> &gt; </Separator>}
-      </React.Fragment>
-    ))}
-  </BreadcrumbsTab>
-);
+const Breadcrumbs = () => {
+  const { breadcrumbs } = useBreadcrumb();
+
+  return (
+    <BreadcrumbsTab>
+      {breadcrumbs.map(({ link, label }, index) => (
+        <React.Fragment key={index}>
+          <StyledLink to={link}>{label}</StyledLink>
+          {index < breadcrumbs.length - 1 && <Separator> &gt; </Separator>}
+        </React.Fragment>
+      ))}
+    </BreadcrumbsTab>
+  );
+};
 
 const BreadcrumbsTab = styled.h6`
   display: inline-block;
