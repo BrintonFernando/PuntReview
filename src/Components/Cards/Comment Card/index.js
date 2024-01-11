@@ -1,52 +1,63 @@
 import React from "react";
 import {
+  Comment,
   CommentContainer,
+  ProfileContainer,
   Profile,
-  CommentDetails,
   PhotoContainer,
   Photo,
   ProfileName,
-  Dot,
   Designation,
   Update,
 } from "./styles";
 import image from "../../../images/CommentProfile.svg";
 import dot from "../../../images/Dot.svg";
 
-const profiles = [
-  {
-    id: 1,
-    photo: image,
-    name: "Robert D’Souza ",
-    details: ["1hr ago", "16th Oct 2023"],
-  },
-];
-
 const CommentCard = () => {
+  const profiles = [
+    {
+      id: 1,
+      photo: image,
+      name: "Robert D’Souza",
+      designation: "(Analyst)",
+      details: ["1hr ago", "16th Oct 2023"],
+    },
+  ];
+
   return (
-    <div>
-      {profiles.map(({ id, photo, name, details }) => (
+    <Comment>
+      {profiles.map(({ id, photo, name, designation, details }) => (
         <CommentContainer key={id}>
-          <Profile>
-            <PhotoContainer>
-              <Photo src={photo} alt="Profile Photo" />
-            </PhotoContainer>
-            <ProfileName>
-              {name}
-              <Designation>(Analyst)</Designation>
-            </ProfileName>
-            <Update>
-              <div>{details[0]}</div>
+          <PhotoContainer>
+            <Photo src={photo} alt="Profile Photo" />
+          </PhotoContainer>
+          <ProfileContainer>
+            {/* <Profile>
               <div>
-                <Dot src={dot} alt="Dot" />
+                <ProfileName>
+                  {name}
+                  <Designation>{designation}</Designation>
+                </ProfileName>
+                <Update>
+                  <div>{details[0]}</div>
+                  <div>
+                    <img src={dot} alt="Dot" />
+                  </div>
+                  <div>{details[1]}</div>
+                </Update>
               </div>
-              <div>{details[1]}</div>
-            </Update>
-          </Profile>
-          <CommentDetails />
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero, Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit.{" "}
+                </p>
+              </div>
+            </Profile> */}
+          </ProfileContainer>
         </CommentContainer>
       ))}
-    </div>
+    </Comment>
   );
 };
 

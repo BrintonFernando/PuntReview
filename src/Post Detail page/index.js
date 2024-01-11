@@ -18,7 +18,7 @@ const PostDetails = () => {
       { label: "Forum", link: "/forum" },
       { label: "Post Detail Page", link: "/post/:postId" },
     ]);
-  }, [updateBreadcrumbs]);
+  }, []);
 
   // Fetch post details based on the postId and display them
   // ...
