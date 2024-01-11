@@ -1,7 +1,7 @@
 // PostDetails.js
 import React, { useEffect } from "react";
-import styled from "styled-components";
 import { useBreadcrumb } from "../Components/Bread Crumps/BreadcrumbContext";
+import { PostDetailContainer } from "./styles";
 import Header from "../Header";
 import GameRatings from "../Game Ratings";
 import Breadcrumbs from "../Components/Bread Crumps";
@@ -38,10 +38,3 @@ const PostDetails = () => {
 };
 
 export default PostDetails;
-
-const PostDetailContainer = styled.div`
-  width: 580px;
-  display: flex;
-  flex-direction: column;
-  margin: 0 350px 50px;
-`;
