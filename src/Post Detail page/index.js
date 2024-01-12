@@ -1,4 +1,3 @@
-// PostDetails.js
 import React, { useEffect } from "react";
 import { useBreadcrumb } from "../Components/Bread Crumps/BreadcrumbContext";
 import { PostDetailContainer } from "./styles";
@@ -7,6 +6,7 @@ import GameRatings from "../Game Ratings";
 import Breadcrumbs from "../Components/Bread Crumps";
 import ImagePost from "../Components/Cards/Image Post Card";
 import CommentCard from "../Components/Cards/Comment Card";
+import AddCommentCard from "../Components/Cards/Comment Card/addPostCard";
 import Footer from "../Footer";
 
 const PostDetails = () => {
@@ -20,9 +20,6 @@ const PostDetails = () => {
     ]);
   }, []);
 
-  // Fetch post details based on the postId and display them
-  // ...
-
   return (
     <>
       <Header />
@@ -31,6 +28,7 @@ const PostDetails = () => {
         <Breadcrumbs />
         <ImagePost />
         <CommentCard />
+        <AddCommentCard />
       </PostDetailContainer>
       <Footer />
     </>

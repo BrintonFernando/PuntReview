@@ -11,6 +11,12 @@ const StyledTextInput = styled.input`
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}px` : "16px")};
   font-weight: 400;
   margin-left: ${({ marginLeft }) => (marginLeft ? `${marginLeft}` : "0")};
+  margin: ${({ margin }) => (margin ? `${margin}` : "0")};
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
 `;
 
 const TextInputComponent = ({
@@ -19,6 +25,7 @@ const TextInputComponent = ({
   marginLeft,
   padding,
   fontSize,
+  margin,
   ...props
 }) => (
   <StyledTextInput
@@ -27,6 +34,7 @@ const TextInputComponent = ({
     placeholder={placeholder || "What’s on your mind?"}
     width={width}
     marginLeft={marginLeft}
+    margin={margin}
     padding={padding}
     fontSize={fontSize}
     {...props}
