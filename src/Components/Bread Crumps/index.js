@@ -1,4 +1,3 @@
-// Breadcrumbs.js
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
@@ -21,6 +20,7 @@ const Breadcrumbs = () => {
 
 const BreadcrumbsTab = styled.h6`
   display: inline-block;
+  width: auto;
   height: 7px;
   font-size: 10px;
   font-family: rubik;

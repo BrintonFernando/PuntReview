@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ForumPage, ForumPageContent, RightContent } from "./styles";
+import { useBreadcrumb } from "../Components/Bread Crumps/BreadcrumbContext";
 import Breadcrumbs from "../Components/Bread Crumps";
 import ExploreTopicsCard from "../Components/Cards/Explore Topics Card";
 import CenterContent from "./centerContent";
@@ -10,17 +11,20 @@ import GameRatings from "../Game Ratings";
 import Footer from "../Footer";
 
 const Forum = () => {
-  const paths = [
-    { label: "Home", link: "/" },
-    { label: "Forum", link: "/forum" },
-  ];
+  const { updateBreadcrumbs } = useBreadcrumb();
 
+  useEffect(() => {
+    updateBreadcrumbs([
+      { label: "Home", link: "/" },
+      { label: "Forum", link: "/forum" },
+    ]);
+  }, []);
   return (
     <>
       <Header />
       <GameRatings />
       <ForumPage>
-        <Breadcrumbs paths={paths} />
+        <Breadcrumbs />
         <ForumPageContent>
           <ExploreTopicsCard />
           <CenterContent />
