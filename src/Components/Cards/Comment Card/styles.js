@@ -124,4 +124,37 @@ export const ButtonContainer = styled.div`
   display: grid;
   grid-template-columns: 25px 194px;
   height: 50px;
+  gap: 241px;
+  margin-top: 10px;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    font-family: rubik;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.59px;
+  }
+  img {
+    cursor: pointer;
+  }
+`;
+export const CancelButton = styled.div`
+  width: 45px;
+  cursor: pointer;
+  color: transparent;
+  background: linear-gradient(to right, #7511f4, #bd08da);
+  background-clip: text;
+`;
+export const SubmitButton = styled.div`
+  display: block;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #f9f9f9;
+  width: 117px;
+  height: 40px;
+  background: linear-gradient(to right, #7511f4, #bd08da);
+  border-radius: 4px;
 `;

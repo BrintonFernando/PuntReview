@@ -6,8 +6,11 @@ import {
   CommentInputHolder,
   ButtonContainer,
   TextInputArea,
+  CancelButton,
+  SubmitButton,
 } from "./styles";
 import profile from "../../../images/Mask group.svg";
+import smiley from "../../../images/SmileyIcon.svg";
 
 const AddCommentCard = () => {
   const [comment, setComment] = useState("");
@@ -39,8 +42,11 @@ const AddCommentCard = () => {
           </TextInputArea>
 
           <ButtonContainer>
-            <div>column 1</div>
-            <div>column 2</div>
+            <img src={smiley} alt="Smiley" />
+            <div>
+              <CancelButton>Cancel</CancelButton>
+              <SubmitButton>Send</SubmitButton>
+            </div>
           </ButtonContainer>
         </CommentInputHolder>
       </AddCommentContent>
